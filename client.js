@@ -8,6 +8,10 @@ const connect = () => {
   conn.on('data', (data) => {
     console.log(data)
   })
+  conn.on('connect', (connect) => {
+console.log('Finally connected');
+  });
+  conn.write('Name: FAR')
   return conn;
 };
 
