@@ -7,6 +7,8 @@ const handleUserInput = (data) => {
   if (data === "s") connection.write("Move: down");
   if (data === "a") connection.write("Move: left");
   if (data === "d") connection.write("Move: right");
+  if (data === "q") connection.write("Say: snek");
+  if (data === "e") connection.write("Say: not today");
 };
 stdin.on("data", handleUserInput);
 
